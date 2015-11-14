@@ -1,0 +1,82 @@
+/*
+Error: Undefined mixin 'span-columns'.
+        on line 63 of /Users/achamberland/code/react/react-prebuilt/src/sass/views.scss, in `span-columns'
+        from line 63 of /Users/achamberland/code/react/react-prebuilt/src/sass/views.scss
+
+58: .visual-list {
+59:   @inlcude outer-container(1920px);
+60: }
+61: 
+62: .visual-list li {
+63:   @include span-columns(3);
+64: }
+65: 
+66: @media screen and (max-width: 768px){
+67: 
+68: }
+
+Backtrace:
+/Users/achamberland/code/react/react-prebuilt/src/sass/views.scss:63:in `span-columns'
+/Users/achamberland/code/react/react-prebuilt/src/sass/views.scss:63
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:349:in `block in visit_mixin'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:98:in `with_mixin'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:347:in `visit_mixin'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/bin/compass:44:in `call'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551@global/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/Users/achamberland/.rvm/rubies/ruby-1.9.3-p551/bin/compass:23:in `load'
+/Users/achamberland/.rvm/rubies/ruby-1.9.3-p551/bin/compass:23:in `<main>'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `eval'
+/Users/achamberland/.rvm/gems/ruby-1.9.3-p551/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'span-columns'.\A         on line 63 of /Users/achamberland/code/react/react-prebuilt/src/sass/views.scss, in `span-columns'\A         from line 63 of /Users/achamberland/code/react/react-prebuilt/src/sass/views.scss\A \A 58: .visual-list {\A 59:   @inlcude outer-container(1920px);\A 60: }\A 61: \A 62: .visual-list li {\A 63:   @include span-columns(3);\A 64: }\A 65: \A 66: @media screen and (max-width: 768px){\A 67: \A 68: }"; }

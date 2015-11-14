@@ -1,0 +1,30 @@
+TODO
+
+Environment
+
+1) Set up gulp to build jsx/babel/sass/anything else with one cl command
+
+
+
+
+
+
+Extensibility/Frameworkiness
+
+1) Allow any react component to plug into the cube as a view.
+   Probably like (View, order, verticalPos)
+   
+2) Configure icons for nav arrows- allow easy option to avoid loading fontawesome
+
+
+
+
+Functionality
+
+1) Rotate top/bottom to match prev view's top/bottom
+
+2) Shade up/down movement animations
+
+√  3) Use arrow keys to move left/right
+
+4) Make cube work with more than 4 sides (Use feed to test)

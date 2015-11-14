@@ -1,0 +1,25 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <title>caution tape</title>
+ <metadata id="metadata4">image/svg+xml</metadata>
+ <g>
+  <title>Layer 1</title>
+  <g id="layer1" transform="rotate(-179.518, 259.736, 246.562)">
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.427796" x="93.889627" height="74.8283" width="49.618557" id="rect5537"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.42746" x="143.174875" height="74.8283" width="49.618557" id="rect6424"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.42746" x="192.790401" height="74.8283" width="49.618557" id="rect6426"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.427491" x="242.282011" height="74.8283" width="49.618557" id="rect6428"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.422699" x="291.902601" height="74.8283" width="49.618557" id="rect6430"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.398499" x="341.366691" height="74.8283" width="49.618557" id="rect6432"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391991" x="391.023371" height="74.8283" width="49.618557" id="rect6434"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391655" x="440.308621" height="74.8283" width="49.618557" id="rect6436"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391655" x="489.924131" height="74.8283" width="49.618557" id="rect6438"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391686" x="539.415731" height="74.8283" width="49.618557" id="rect6440"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.386895" x="589.036341" height="74.8283" width="49.618557" id="rect6442"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.362694" x="638.500451" height="74.8283" width="49.618557" id="rect6444"/>
+   <rect fill="#ddd" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391984" x="688.199851" height="74.8283" width="49.618557" id="rect6446"/>
+   <rect fill="#f9f9f9" fill-rule="evenodd" stroke-width="0.3" stroke-miterlimit="4" transform="matrix(1.13171, 0, 0.653939, -0.84286, -45.8683, -2.06544)" y="-332.391648" x="737.485131" height="74.8283" width="49.618557" id="rect6448"/>
+  </g>
+  <path id="svg_1" d="m-109,214.953125l-49,-0.953125l-1,61" stroke-width="5" stroke="#000000" fill="#000000"/>
+  <path id="svg_2" d="m676,218l0,60l-48,0" stroke-width="5" stroke="#ffff00" fill="#ffff00"/>
+ </g>
+</svg>
