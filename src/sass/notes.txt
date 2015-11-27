@@ -1,0 +1,6 @@
+SASS Notes:
+
+Uses 7-1 pattern for sass structure:
+http://sass-guidelin.es/#architecture
+
+(Will) use BEM 

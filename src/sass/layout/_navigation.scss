@@ -1,0 +1,48 @@
+
+.arrow-circle {
+  width: 7vw;
+  height: 7vw;
+  padding: 1vw;
+  position:absolute;
+  border: 1px solid #999;
+  border-radius: 5vw;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+ 
+  cursor:pointer;
+
+  transition:box-shadow 0.5s ease;
+
+  i {
+    width: 7vw;
+    height: 5vw;
+    font-size: 3vw;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow: -0.5px -0.5px 0 #333, 0.5px -0.5px 0 #333, -0.5px 0.5px 0 #333, 0.5px 0.5px 0 #333;
+    color: $view-bg;
+  }
+  
+  &:hover {
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
+  
+    i {
+      color: #fff;
+      text-shadow: -0.5px -0.5px 0 #555, 0.5px -0.5px 0 #555, -0.5px 0.5px 0 #555, 0.5px 0.5px 0 #555;
+      background:transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.prev-arrow {
+  text-align: right;
+  left: -3vw;
+  top: 50%;
+}
+.next-arrow {
+  text-align: left;
+  right: -3vw;
+  top: 50%;
+}
+

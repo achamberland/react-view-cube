@@ -1,0 +1,36 @@
+header {
+  padding:1% 2%;
+  
+  border-bottom:1px solid #bbb;
+  overflow: hidden;
+  
+  h1 {
+    float:left;
+    width: 90%;
+    text-align: center;
+  }
+  
+  a {
+    @include click-padding(2%, 2%);
+    
+    cursor: pointer;
+    position:relative;
+    z-index:1;
+  }
+    
+  i {
+    padding: 20%;
+  }
+    
+  .fa {
+    font-size:3vw;
+  }
+  
+  .MenuIcon {
+    float:left;
+  }
+
+  .contactIcon {
+    float: right;
+  }
+}
