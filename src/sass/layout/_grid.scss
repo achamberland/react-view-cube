@@ -1,10 +1,10 @@
-.flex-list {
+.flex {
   @inlcude outer-container(1920px);
   padding: 0 3%;
   min-height:80vh;
 }
 
-.flex-square {
+.flex__square {
   @include span-columns(4);
   height:31.76157%;
   padding: 2%;
@@ -24,11 +24,11 @@
     box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.8)
   }
 }
-.flex-square:nth-child(3n) {
+.flex__square:nth-child(3n) {
   @include omega($query: block)
 }
 
-.flex-icon {
+.flex__icon {
   width: 20vw;
   height: auto;
 }

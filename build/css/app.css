@@ -257,9 +257,9 @@ section section {
   position: absolute;
   border: 1px solid #999;
   border-radius: 5vw;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5) inset;
   cursor: pointer;
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.25s ease;
 }
 /* line 15, ../../src/sass/layout/_navigation.scss */
 .arrow-circle i {
@@ -285,28 +285,28 @@ section section {
 }
 
 /* line 38, ../../src/sass/layout/_navigation.scss */
-.prev-arrow {
+.arrow-circle--prev {
   text-align: right;
   left: -3vw;
   top: 50%;
 }
 
 /* line 43, ../../src/sass/layout/_navigation.scss */
-.next-arrow {
+.arrow-circle--next {
   text-align: left;
   right: -3vw;
   top: 50%;
 }
 
 /* line 1, ../../src/sass/layout/_grid.scss */
-.flex-list {
+.flex {
   @inlcude outer-container(1920px);
   padding: 0 3%;
   min-height: 80vh;
 }
 
 /* line 7, ../../src/sass/layout/_grid.scss */
-.flex-square {
+.flex__square {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -316,32 +316,32 @@ section section {
   text-align: center;
 }
 /* line 89, ../../src/sass/vendors/neat/grid/_span-columns.scss */
-.flex-square:last-child {
+.flex__square:last-child {
   margin-right: 0;
 }
 /* line 14, ../../src/sass/layout/_grid.scss */
-.flex-square a {
+.flex__square a {
   margin: -50% -50%;
   padding: 50% 50%;
   display: inline-block;
 }
 /* line 18, ../../src/sass/layout/_grid.scss */
-.flex-square i {
+.flex__square i {
   transition: box-shadow 0.2s ease, color 0.2s ease;
 }
 /* line 22, ../../src/sass/layout/_grid.scss */
-.flex-square a:hover i {
+.flex__square a:hover i {
   color: #666;
   box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.8);
 }
 
 /* line 27, ../../src/sass/layout/_grid.scss */
-.flex-square:nth-child(3n) {
+.flex__square:nth-child(3n) {
   margin-right: 0;
 }
 
 /* line 31, ../../src/sass/layout/_grid.scss */
-.flex-icon {
+.flex__icon {
   width: 20vw;
   height: auto;
 }
@@ -356,7 +356,7 @@ section section {
 }
 
 /* line 10, ../../src/sass/layout/_bottom-bar.scss */
-.construction {
+.bottom-bar--construction {
   background-image: url("../images/banners/caution.svg");
 }
 
@@ -372,7 +372,7 @@ section section {
 }
 
 /* line 24, ../../src/sass/layout/_bottom-bar.scss */
-.tone-menu button {
+.tone-menu__button {
   display: inline-block;
   width: 46%;
   margin: 1% 2%;
@@ -384,18 +384,18 @@ section section {
 }
 
 /* line 36, ../../src/sass/layout/_bottom-bar.scss */
-.tone-menu button:last-child {
+.tone-menu__button:last-child {
   right: 0;
 }
 
 /* line 1, ../../src/sass/pages/_menu.scss */
-.menu-list {
+.menu {
   perspective: 550px;
   margin-bottom: 30px;
 }
 
 /* line 5, ../../src/sass/pages/_menu.scss */
-.menu-option {
+.menu__option {
   width: 100%;
   height: 50px;
   margin: auto;
@@ -410,32 +410,32 @@ section section {
   cursor: pointer;
 }
 /* line 19, ../../src/sass/pages/_menu.scss */
-.menu-option:hover {
+.menu__option:hover {
   background: #fff;
 }
 
 /* line 24, ../../src/sass/pages/_menu.scss */
-.menu-deco-text {
+.menu__deco-text {
   color: #ddd;
   text-align: center;
 }
 
 /* line 28, ../../src/sass/pages/_menu.scss */
-.menu-deco-text1 {
+.menu__deco-text1 {
   transform: rotate(15deg);
   font-size: 26px;
   margin-right: 10%;
 }
 
 /* line 33, ../../src/sass/pages/_menu.scss */
-.menu-deco-text2 {
+.menu__deco-text2 {
   transform: rotate(-7deg);
   font-size: 14px;
   margin-right: 40%;
 }
 
 /* line 39, ../../src/sass/pages/_menu.scss */
-.menu-deco-text3 {
+.menu__deco-text3 {
   transform: rotate(35deg);
   font-size: 22px;
   margin-left: 10%;

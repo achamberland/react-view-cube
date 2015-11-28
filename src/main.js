@@ -42,8 +42,64 @@ class Page extends React.Component {
     else if (index < 0) return views[this.getViewsInFlow().length - 1];
     else return view;
   }
-  
-  
+
+  getStyles() {
+    return {
+      width: '100%',
+      height: '100%',
+
+      transition: 'transform 0.5s ease',
+      transformStyle: 'preserve-3d',
+      transform: 'rotateX(0deg) rotateY(0deg) translateX(50%) translateZ(0px)'
+    };
+  }
+
+  get3DPosition() {
+    return {
+      Home: {
+        rotateX: 0,
+        rotateY: 0,
+        translateX: '0%',
+        translateY: '0%',
+        translateZ: '0vw'
+      },
+      View_1: {
+        rotateX: 0,
+        rotateY: -90,
+        translateX: '-50%',
+        translateY: '0%',
+        translateZ: '50vw'
+      },
+      View_2: {
+        rotateX: 0,
+        rotateY: -180,
+        translateX: '0%',
+        translateY: '0%',
+        translateZ: '100vw'
+      },
+      About: {
+        rotateX: 0,
+        rotateY: -270,
+        translateX: '50%',
+        translateY: '0%',
+        translateZ: '50vw'
+      }, 
+      Menu: {
+        rotateX: -90,
+        rotateY: 0,
+        translateX: '0%',
+        translateY: '50%',
+        translateZ: '50vh'
+      },
+      Contact: {
+        rotateX: 90,
+        rotateY: 0,
+        translateX: '0%',
+        translateY: '-50%',
+        translateZ: '50vh'
+      }
+    };
+  }
 
   componentWillMount() {
     
@@ -93,7 +149,7 @@ class Page extends React.Component {
         //this.changeViewEvent(e, prev);
         
         //Hack for wednesday
-        $('.' + this.state.views.active + ' .prev-arrow').trigger('click');
+        $('.' + this.state.views.active + ' .arrow-circle--prev').trigger('click');
       }
       else if (e.keyCode === 38) {
         $('.MenuIcon i').eq(0).trigger('click');
@@ -103,7 +159,7 @@ class Page extends React.Component {
         //this.changeViewEvent(e, next);
 
         //Hack for wednesday
-        $('.' + this.state.views.active + ' .next-arrow').trigger('click');
+        $('.' + this.state.views.active + ' .arrow-circle--next').trigger('click');
       }
       else if (e.keyCode === 40) {
         $('.contactIcon i').eq(0).trigger('click');
@@ -268,10 +324,10 @@ var NavArrows = React.createClass({
 
     return (
       <div className={this.getMovement()}>
-        <div data-viewid={prev} onClick={function(e){this.props.clickAction(e, prev, 'prev')}.bind(this) } className={'arrow-circle prev-arrow ' + cubeFace}>
+        <div data-viewid={prev} onClick={function(e){this.props.clickAction(e, prev, 'prev')}.bind(this) } className={'arrow-circle arrow-circle--prev ' + cubeFace}>
           <i className='fa fa-2x fa-arrow-left'></i>
         </div>
-        <div data-viewid={next} onClick={function(e){this.props.clickAction(e, next, 'next')}.bind(this) } className={'arrow-circle next-arrow ' + cubeFace}>
+        <div data-viewid={next} onClick={function(e){this.props.clickAction(e, next, 'next')}.bind(this) } className={'arrow-circle arrow-circle--next ' + cubeFace}>
           <i className='fa fa-2x fa-arrow-right'></i>
         </div>
       </div>
@@ -313,20 +369,20 @@ View.Contact = React.createClass({
           clickAction={this.props.clickAction}
         />
         <section>
-          <ul className='contactList flex-list'>
-            <li className="flex-square">
+          <ul className='contactList flex'>
+            <li className="flex__square">
               <a href="@">
                 <i className="fa fa-3x fa-phone"/>
                 <h3> Phone </h3>
               </a>
             </li>
-            <li className="flex-square">
+            <li className="flex__square">
               <a href="#">
                 <i className="fa fa-3x fa-envelope"/>
                 <h3> email </h3>
               </a>
             </li>
-            <li className="flex-square">
+            <li className="flex__square">
               <a href="#">
                 <i className="fa fa-3x fa-linkedin"/>
                 <h3> LinkedIn </h3>
@@ -403,9 +459,9 @@ View.Menu = React.createClass({
           clickAction={this.props.clickAction}
         />
         <View.Menu.List clickAction={this.props.clickAction} /> 
-        <h4 className='menu-deco-text1 menu-deco-text'>3D Menu!</h4>
-        <h4 className='menu-deco-text2 menu-deco-text'>Whoa!</h4>
-        <h4 className='menu-deco-text3 menu-deco-text'>Gimmicky!</h4>
+        <h4 className='menu__deco-text1 menu__deco-text'>3D Menu!</h4>
+        <h4 className='menu__deco-text2 menu__deco-text'>Whoa!</h4>
+        <h4 className='menu__deco-text3 menu__deco-text'>Gimmicky!</h4>
       </section>
     )
   },
@@ -445,13 +501,13 @@ View.Menu.List = React.createClass({
      };
 
      return (
-       <li className='menu-option' style={styles} data-viewid={item.openView} onClick={this.handleClick} key={i}>
+       <li className='menu__option' style={styles} data-viewid={item.openView} onClick={this.handleClick} key={i}>
         {item.title}
        </li>
      )
     }.bind(this));
     return (
-     <ul className='menu-list'>
+     <ul className='menu'>
       {listItems}
      </ul>
     )
@@ -466,21 +522,21 @@ View.Menu.menuItem = React.createClass({
 });
 */
 
-
+ 
 View.NeatList = React.createClass({
   render: function(){ console.log(this.props);
     var listItems = this.props.data.map(function(item, i){
      return (
-       <li className='flex-square' key={i}>
-       <img src={item.imageUrl} alt={item.name + ' logo'} className={item.name + '-icon' + ' flex-icon'} />
+       <li className='flex__square' key={i}>
+       <img src={item.imageUrl} alt={item.name + ' logo'} className={item.name + '-icon' + ' flex__icon'} />
        <h3>{item.name}</h3>
        <p> {item.decription}</p>
        </li>
      )
-   });
+   }); 
 
    return (
-     <ul className='flex-list'>
+     <ul className='flex'>
        {listItems}
      </ul>
    )

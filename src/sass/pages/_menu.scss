@@ -1,8 +1,8 @@
-.menu-list {
+.menu {
   perspective: 550px;
   margin-bottom: 30px;
 }
-.menu-option {
+.menu__option {
   width:100%;
   height:50px;
   margin:auto;
@@ -12,7 +12,7 @@
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
   list-style: none;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s ease;  
   z-index: 1;
   cursor: pointer;
   
@@ -21,22 +21,22 @@
   }
 }
 
-.menu-deco-text {
+.menu__deco-text {
   color:#ddd;
   text-align: center; 
 }
-.menu-deco-text1 {
+.menu__deco-text1 {
   transform: rotate(15deg);
   font-size:26px;
   margin-right:10%;
 }
-.menu-deco-text2 {
+.menu__deco-text2 {
   transform: rotate(-7deg);
   font-size:14px;
 
   margin-right:40%;
 }
-.menu-deco-text3 {
+.menu__deco-text3 {
   transform: rotate(35deg);
   font-size:22px;
 

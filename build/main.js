@@ -108,6 +108,66 @@ var Page = (function (_React$Component) {
       if (index > views.length) return views[0];else if (index < 0) return views[this.getViewsInFlow().length - 1];else return view;
     }
   }, {
+    key: 'getStyles',
+    value: function getStyles() {
+      return {
+        width: '100%',
+        height: '100%',
+
+        transition: 'transform 0.5s ease',
+        transformStyle: 'preserve-3d',
+        transform: 'rotateX(0deg) rotateY(0deg) translateX(50%) translateZ(0px)'
+      };
+    }
+  }, {
+    key: 'get3DPosition',
+    value: function get3DPosition() {
+      return {
+        Home: {
+          rotateX: 0,
+          rotateY: 0,
+          translateX: '0%',
+          translateY: '0%',
+          translateZ: '0vw'
+        },
+        View_1: {
+          rotateX: 0,
+          rotateY: -90,
+          translateX: '-50%',
+          translateY: '0%',
+          translateZ: '50vw'
+        },
+        View_2: {
+          rotateX: 0,
+          rotateY: -180,
+          translateX: '0%',
+          translateY: '0%',
+          translateZ: '100vw'
+        },
+        About: {
+          rotateX: 0,
+          rotateY: -270,
+          translateX: '50%',
+          translateY: '0%',
+          translateZ: '50vw'
+        },
+        Menu: {
+          rotateX: -90,
+          rotateY: 0,
+          translateX: '0%',
+          translateY: '50%',
+          translateZ: '50vh'
+        },
+        Contact: {
+          rotateX: 90,
+          rotateY: 0,
+          translateX: '0%',
+          translateY: '-50%',
+          translateZ: '50vh'
+        }
+      };
+    }
+  }, {
     key: 'componentWillMount',
     value: function componentWillMount() {}
   }, {
@@ -162,7 +222,7 @@ var Page = (function (_React$Component) {
           //this.changeViewEvent(e, prev);
 
           //Hack for wednesday
-          $('.' + _this.state.views.active + ' .prev-arrow').trigger('click');
+          $('.' + _this.state.views.active + ' .arrow-circle--prev').trigger('click');
         } else if (e.keyCode === 38) {
           $('.MenuIcon i').eq(0).trigger('click');
         } else if (e.keyCode === 39) {
@@ -171,7 +231,7 @@ var Page = (function (_React$Component) {
           //this.changeViewEvent(e, next);
 
           //Hack for wednesday
-          $('.' + _this.state.views.active + ' .next-arrow').trigger('click');
+          $('.' + _this.state.views.active + ' .arrow-circle--next').trigger('click');
         } else if (e.keyCode === 40) {
           $('.contactIcon i').eq(0).trigger('click');
         }
@@ -358,14 +418,14 @@ var NavArrows = React.createClass({
         'div',
         { 'data-viewid': prev, onClick: (function (e) {
             this.props.clickAction(e, prev, 'prev');
-          }).bind(this), className: 'arrow-circle prev-arrow ' + cubeFace },
+          }).bind(this), className: 'arrow-circle arrow-circle--prev ' + cubeFace },
         React.createElement('i', { className: 'fa fa-2x fa-arrow-left' })
       ),
       React.createElement(
         'div',
         { 'data-viewid': next, onClick: (function (e) {
             this.props.clickAction(e, next, 'next');
-          }).bind(this), className: 'arrow-circle next-arrow ' + cubeFace },
+          }).bind(this), className: 'arrow-circle arrow-circle--next ' + cubeFace },
         React.createElement('i', { className: 'fa fa-2x fa-arrow-right' })
       )
     );
@@ -411,10 +471,10 @@ View.Contact = React.createClass({
         null,
         React.createElement(
           'ul',
-          { className: 'contactList flex-list' },
+          { className: 'contactList flex' },
           React.createElement(
             'li',
-            { className: 'flex-square' },
+            { className: 'flex__square' },
             React.createElement(
               'a',
               { href: '@' },
@@ -428,7 +488,7 @@ View.Contact = React.createClass({
           ),
           React.createElement(
             'li',
-            { className: 'flex-square' },
+            { className: 'flex__square' },
             React.createElement(
               'a',
               { href: '#' },
@@ -442,7 +502,7 @@ View.Contact = React.createClass({
           ),
           React.createElement(
             'li',
-            { className: 'flex-square' },
+            { className: 'flex__square' },
             React.createElement(
               'a',
               { href: '#' },
@@ -535,17 +595,17 @@ View.Menu = React.createClass({
       React.createElement(View.Menu.List, { clickAction: this.props.clickAction }),
       React.createElement(
         'h4',
-        { className: 'menu-deco-text1 menu-deco-text' },
+        { className: 'menu__deco-text1 menu__deco-text' },
         '3D Menu!'
       ),
       React.createElement(
         'h4',
-        { className: 'menu-deco-text2 menu-deco-text' },
+        { className: 'menu__deco-text2 menu__deco-text' },
         'Whoa!'
       ),
       React.createElement(
         'h4',
-        { className: 'menu-deco-text3 menu-deco-text' },
+        { className: 'menu__deco-text3 menu__deco-text' },
         'Gimmicky!'
       )
     );
@@ -583,13 +643,13 @@ View.Menu.List = React.createClass({
 
       return React.createElement(
         'li',
-        { className: 'menu-option', style: styles, 'data-viewid': item.openView, onClick: this.handleClick, key: i },
+        { className: 'menu__option', style: styles, 'data-viewid': item.openView, onClick: this.handleClick, key: i },
         item.title
       );
     }).bind(this));
     return React.createElement(
       'ul',
-      { className: 'menu-list' },
+      { className: 'menu' },
       listItems
     );
   }
@@ -611,8 +671,8 @@ View.NeatList = React.createClass({
     var listItems = this.props.data.map(function (item, i) {
       return React.createElement(
         'li',
-        { className: 'flex-square', key: i },
-        React.createElement('img', { src: item.imageUrl, alt: item.name + ' logo', className: item.name + '-icon' + ' flex-icon' }),
+        { className: 'flex__square', key: i },
+        React.createElement('img', { src: item.imageUrl, alt: item.name + ' logo', className: item.name + '-icon' + ' flex__icon' }),
         React.createElement(
           'h3',
           null,
@@ -629,7 +689,7 @@ View.NeatList = React.createClass({
 
     return React.createElement(
       'ul',
-      { className: 'flex-list' },
+      { className: 'flex' },
       listItems
     );
   }

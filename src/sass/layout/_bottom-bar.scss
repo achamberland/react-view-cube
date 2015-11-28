@@ -7,7 +7,7 @@
 }
 
 
-.construction{
+.bottom-bar--construction{
   background-image: url('../images/banners/caution.svg');
 }
 
@@ -21,7 +21,7 @@
   drop-shadow:0px 0px 5px rgba(0,0,0,0.3);
 }
 
-.tone-menu button {
+.tone-menu__button {
   display:inline-block;
   width:46%;
   margin:1% 2%;
@@ -33,7 +33,7 @@
   text-align: center;
   font-size: 16px;
 }
-.tone-menu button:last-child {
+.tone-menu__button:last-child {
   right:0;
 }
 
