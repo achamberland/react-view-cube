@@ -1,18 +1,25 @@
 TODO
 
+Top 3:
+1) Support adding any React component as a view/face of the cube with a single method [ Like: Cube.addFace(component, options) ]
+2) Support more than 4 horizontal sides (while keeeping the 4-sided cube shape look in animations)
+3) Speed animation when cube's views are complicated
+
+
 Environment
 
 1) Set up gulp to build jsx/babel/sass/anything else with one cl command
 
-
-
-
+2) Organize JS into modules
 
 
 Extensibility/Frameworkiness
 
 1) Allow any react component to plug into the cube as a view.
-   Probably like (View, order, verticalPos)
+   Probably like:
+     Cube.addFace(component, options);
+     Cube.removeFace(component);
+     Cube.shiftFace(component, destination);
    
 2) Configure icons for nav arrows- allow easy option to avoid loading fontawesome
 
