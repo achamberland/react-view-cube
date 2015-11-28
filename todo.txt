@@ -1,5 +1,7 @@
 TODO
 
+Add nav arrows to any horizontal face, add header to all faces
+
 Top 3:
 1) Support adding any React component as a view/face of the cube with a single method [ Like: Cube.addFace(component, options) ]
 2) Support more than 4 horizontal sides (while keeeping the 4-sided cube shape look in animations)

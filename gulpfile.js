@@ -6,8 +6,9 @@
 
 //Config - Filepaths
 
-var JS_SRC   = 'src/main.js';
-var JS_DEST  = 'build';
+var JSX_SRC     = 'src/jsx/main.jsx';
+var JSX_SRC_DIR = 'src/jsx/**/*';
+var JS_DEST     = 'build/js';
 
 var SASS_SRC = 'src/sass/app.scss';
 var CSS_DEST = 'build/css';
@@ -27,6 +28,7 @@ var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var babel = require("gulp-babel");
+var babelify = require("babelify");
 
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
@@ -38,18 +40,16 @@ var changed = require('gulp-changed');
 //Tasks
 
 gulp.task('bundleJS', function() {
-  return gulp.src(JS_SRC)
+  
+  return browserify( {entries: JSX_SRC, extensions: ['.jsx'], debug:true} )
+    .transform(babelify, {presets: ["es2015", "react"]})
+    .bundle()
+
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .pipe(source('./main.js'))
     .pipe(buffer())
-
     .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
-
-      .pipe(babel({
-            presets: ['react', 'es2015']
-        }))
-      .pipe(concat('main.js'))
       .pipe(uglify())
-
     .pipe(sourcemaps.write('./')) // writes .map file
 
     .pipe(gulp.dest(JS_DEST))
@@ -63,18 +63,10 @@ gulp.task('bundleSASS', function(){
     .pipe(gulp.dest(CSS_DEST))
 });
 
-gulp.task('browserify', ['bundleJS'], function() {
-  var bundleStream = browserify( JS_DEST + '/bundle.js').bundle()
- 
-  bundleStream
-    .pipe(source(JS_DEST + '/main.js'))
-    .pipe(gulp.dest('./'))
-})
 
+gulp.task('default', ['bundleJS', 'bundleSASS'], function() {
 
-gulp.task('default', ['bundleJS', 'browserify', 'bundleSASS'], function() {
-
-  gulp.watch( JS_SRC,   ['bundleJS',  'browserify'] );
-  gulp.watch( SASS_SRC, ['bundleSASS'] );
+  gulp.watch( JSX_SRC_DIR, ['bundleJS'] );
+  gulp.watch( SASS_SRC,    ['bundleSASS'] );
 
 });
