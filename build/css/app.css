@@ -1,15 +1,15 @@
-@import url(libraries/font-awesome/_font-awesome.min.css);
-/* line 4, ../../src/sass/libraries/neat/grid/_box-sizing.scss */
+@import url(vendors/font-awesome/_font-awesome.min.css);
+/* line 4, ../../src/sass/vendors/neat/grid/_box-sizing.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 9, ../../src/sass/libraries/neat/grid/_box-sizing.scss */
+/* line 9, ../../src/sass/vendors/neat/grid/_box-sizing.scss */
 *, *::after, *::before {
   box-sizing: inherit;
 }
 
-/* line 6, ../../src/sass/_reset.scss */
+/* line 6, ../../src/sass/base/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -19,45 +19,45 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-/* line 16, ../../src/sass/_reset.scss */
+/* line 16, ../../src/sass/base/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 19, ../../src/sass/_reset.scss */
+/* line 19, ../../src/sass/base/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../src/sass/_reset.scss */
+/* line 22, ../../src/sass/base/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 25, ../../src/sass/_reset.scss */
+/* line 25, ../../src/sass/base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 29, ../../src/sass/_reset.scss */
+/* line 29, ../../src/sass/base/_reset.scss */
 blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 35, ../../src/sass/_reset.scss */
+/* line 35, ../../src/sass/base/_reset.scss */
 q:before, q:after {
   content: "";
   content: none;
 }
 
-/* line 40, ../../src/sass/_reset.scss */
+/* line 40, ../../src/sass/base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 1, ../../src/sass/_general.scss */
+/* line 1, ../../src/sass/base/_general.scss */
 html, body {
   width: 100%;
   height: 100%;
@@ -65,42 +65,42 @@ html, body {
   margin: 0;
 }
 
-/* line 8, ../../src/sass/_general.scss */
+/* line 8, ../../src/sass/base/_general.scss */
 h1, h2, h3, h4, h5, p, a {
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 13, ../../src/sass/_general.scss */
+/* line 13, ../../src/sass/base/_general.scss */
 h1 {
   font-size: 38px;
   font-size: 5vw;
 }
 
-/* line 19, ../../src/sass/_general.scss */
+/* line 19, ../../src/sass/base/_general.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 23, ../../src/sass/_general.scss */
+/* line 23, ../../src/sass/base/_general.scss */
 li {
   list-style: none;
 }
 
-/* line 34, ../../src/sass/_general.scss */
+/* line 1, ../../src/sass/layout/_header.scss */
 header {
   padding: 1% 2%;
   border-bottom: 1px solid #bbb;
   overflow: hidden;
 }
-/* line 40, ../../src/sass/_general.scss */
+/* line 7, ../../src/sass/layout/_header.scss */
 header h1 {
   float: left;
   width: 90%;
   text-align: center;
 }
-/* line 46, ../../src/sass/_general.scss */
+/* line 13, ../../src/sass/layout/_header.scss */
 header a {
   margin: -2% -2%;
   padding: 2% 2%;
@@ -109,21 +109,49 @@ header a {
   position: relative;
   z-index: 1;
 }
-/* line 54, ../../src/sass/_general.scss */
+/* line 21, ../../src/sass/layout/_header.scss */
 header i {
   padding: 20%;
 }
-/* line 58, ../../src/sass/_general.scss */
+/* line 25, ../../src/sass/layout/_header.scss */
 header .fa {
   font-size: 3vw;
 }
+/* line 29, ../../src/sass/layout/_header.scss */
+header .MenuIcon {
+  float: left;
+}
+/* line 33, ../../src/sass/layout/_header.scss */
+header .contactIcon {
+  float: right;
+}
 
-/* line 63, ../../src/sass/_general.scss */
+/* line 1, ../../src/sass/layout/_page.scss */
+#target {
+  width: 100%;
+  height: 100%;
+  background: #fbfbfb;
+}
+
+/* line 7, ../../src/sass/layout/_page.scss */
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 14, ../../src/sass/layout/_page.scss */
+.page-container {
+  width: 100%;
+  height: 100%;
+  perspective: 100vw;
+}
+
+/* line 20, ../../src/sass/layout/_page.scss */
 section {
   border: 1px solid #bbb;
 }
 
-/* line 67, ../../src/sass/_general.scss */
+/* line 24, ../../src/sass/layout/_page.scss */
 section section {
   width: 100%;
   padding: 1% 5% 5%;
@@ -131,155 +159,14 @@ section section {
   overflow: hidden;
 }
 
-/* line 75, ../../src/sass/_general.scss */
-#target {
-  width: 100%;
-  height: 100%;
-  background: #fbfbfb;
-}
-
-/* line 82, ../../src/sass/_general.scss */
-.page {
-  width: 100%;
-  height: 100%;
-}
-
-/* line 91, ../../src/sass/_general.scss */
-.inline-list {
-  display: inline-block;
-}
-
-/* line 97, ../../src/sass/_general.scss */
-.bottom-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 30px;
-}
-
-/* line 104, ../../src/sass/_general.scss */
-.construction {
-  background-image: url("../images/banners/caution.svg");
-}
-
-/* line 109, ../../src/sass/_general.scss */
-.formal {
-  font-family: cursive;
-}
-
-/* line 113, ../../src/sass/_general.scss */
-.casual {
-  font-family: "Comic Sans MS", "Comic Sans";
-}
-
-/* ------ Components for multiple views -------*/
-/* line 5, ../../src/sass/_view-components.scss */
-.arrow-circle {
-  width: 7vw;
-  height: 7vw;
-  padding: 1vw;
-  position: absolute;
-  border: 1px solid #999;
-  border-radius: 5vw;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
-  cursor: pointer;
-  transition: box-shadow 0.5s ease;
-}
-/* line 18, ../../src/sass/_view-components.scss */
-.arrow-circle i {
-  width: 7vw;
-  height: 5vw;
-  font-size: 3vw;
-  display: table-cell;
-  vertical-align: middle;
-  text-shadow: -0.5px -0.5px 0 #333, 0.5px -0.5px 0 #333, -0.5px 0.5px 0 #333, 0.5px 0.5px 0 #333;
-  color: #fbfbfb;
-}
-/* line 28, ../../src/sass/_view-components.scss */
-.arrow-circle:hover {
-  background: #fff;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
-}
-/* line 32, ../../src/sass/_view-components.scss */
-.arrow-circle:hover i {
-  color: #fff;
-  text-shadow: -0.5px -0.5px 0 #555, 0.5px -0.5px 0 #555, -0.5px 0.5px 0 #555, 0.5px 0.5px 0 #555;
-  background: transparent;
-  box-shadow: none;
-}
-
-/* line 41, ../../src/sass/_view-components.scss */
-.prev-arrow {
-  text-align: right;
-  left: -3vw;
-  top: 50%;
-}
-
-/* line 46, ../../src/sass/_view-components.scss */
-.next-arrow {
-  text-align: left;
-  right: -3vw;
-  top: 50%;
-}
-
-/* line 53, ../../src/sass/_view-components.scss */
-.flex-list {
-  @inlcude outer-container(1920px);
-  padding: 0 3%;
-  min-height: 80vh;
-}
-
-/* line 59, ../../src/sass/_view-components.scss */
-.flex-square {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  height: 31.76157%;
-  padding: 2%;
-  text-align: center;
-}
-/* line 89, ../../src/sass/libraries/neat/grid/_span-columns.scss */
-.flex-square:last-child {
-  margin-right: 0;
-}
-/* line 66, ../../src/sass/_view-components.scss */
-.flex-square a {
-  margin: -50% -50%;
-  padding: 50% 50%;
-  display: inline-block;
-}
-/* line 70, ../../src/sass/_view-components.scss */
-.flex-square i {
-  transition: box-shadow 0.2s ease, color 0.2s ease;
-}
-/* line 74, ../../src/sass/_view-components.scss */
-.flex-square a:hover i {
-  color: #666;
-  box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.8);
-}
-
-/* line 79, ../../src/sass/_view-components.scss */
-.flex-square:nth-child(3n) {
-  margin-right: 0;
-}
-
-/* line 83, ../../src/sass/_view-components.scss */
-.flex-icon {
-  width: 20vw;
-  height: auto;
-}
-
-/*3D*/
-/* line 94, ../../src/sass/_view-components.scss */
+/* line 1, ../../src/sass/layout/_cube-face.scss */
 .page {
   transition: transform 0.5s ease;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg) translateX(49%) translateZ(0px);
 }
 
-/* line 100, ../../src/sass/_view-components.scss */
+/* line 7, ../../src/sass/layout/_cube-face.scss */
 .Home, .View_1, .View_2, .About, .Menu, .Contact {
   width: 100%;
   height: 100%;
@@ -290,61 +177,37 @@ section section {
   backface-visibility: hidden;
 }
 
-/* line 110, ../../src/sass/_view-components.scss */
+/* line 18, ../../src/sass/layout/_cube-face.scss */
 .Home {
   transform: rotateX(0deg) rotateY(0deg) translateX(0%) translateZ(0px);
 }
 
-/* line 111, ../../src/sass/_view-components.scss */
+/* line 19, ../../src/sass/layout/_cube-face.scss */
 .View_1 {
   transform: rotateX(0deg) rotateY(90deg) translateX(50%) translateZ(50vw);
 }
 
-/* line 112, ../../src/sass/_view-components.scss */
+/* line 20, ../../src/sass/layout/_cube-face.scss */
 .View_2 {
   transform: rotateY(180deg) translateZ(100vw);
 }
 
-/* line 113, ../../src/sass/_view-components.scss */
+/* line 21, ../../src/sass/layout/_cube-face.scss */
 .About {
   transform: rotateX(0deg) rotateY(270deg) translateX(-50%) translateZ(50vw);
 }
 
-/* line 115, ../../src/sass/_view-components.scss */
+/* line 23, ../../src/sass/layout/_cube-face.scss */
 .Menu {
   transform: rotateX(-90deg) rotateY(180deg) rotateZ(180deg) translateY(-50%) translateZ(50vh);
 }
 
-/* line 116, ../../src/sass/_view-components.scss */
+/* line 24, ../../src/sass/layout/_cube-face.scss */
 .Contact {
   transform: rotateX(-90deg) translateY(50%) translateZ(50vh);
 }
 
-/* line 119, ../../src/sass/_view-components.scss */
-.moving-top .arrow-circle {
-  box-shadow: 1px -30px 40px rgba(0, 0, 0, 0.3) inset;
-  text-shadow: 1px -30px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* line 123, ../../src/sass/_view-components.scss */
-.moving-left .arrow-circle {
-  box-shadow: -30px 1px 40px rgba(0, 0, 0, 0.3) inset;
-  text-shadow: -30px 1px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* line 127, ../../src/sass/_view-components.scss */
-.moving-bottom .arrow-circle {
-  box-shadow: 1px 30px 40px rgba(0, 0, 0, 0.3) inset;
-  text-shadow: 1px 30px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* line 131, ../../src/sass/_view-components.scss */
-.moving-right .arrow-circle {
-  box-shadow: 30px 1px 40px rgba(0, 0, 0, 0.3) inset;
-  text-shadow: 30px 1px 40px rgba(0, 0, 0, 0.3);
-}
-
-/* line 139, ../../src/sass/_view-components.scss */
+/* line 29, ../../src/sass/layout/_cube-face.scss */
 .cube {
   position: relative;
   transition: transform 0.5s ease;
@@ -353,7 +216,7 @@ section section {
   transform: none !important;
 }
 
-/* line 146, ../../src/sass/_view-components.scss */
+/* line 36, ../../src/sass/layout/_cube-face.scss */
 .face {
   position: absolute;
   width: 50px;
@@ -361,57 +224,143 @@ section section {
   background: #fbfbfb;
   transform: none !important;
 }
-/* line 155, ../../src/sass/_view-components.scss */
+/* line 45, ../../src/sass/layout/_cube-face.scss */
 .face .front {
   transform: rotateX(0deg) rotateY(0deg) translateX(0%) translateZ(0px);
 }
-/* line 158, ../../src/sass/_view-components.scss */
+/* line 48, ../../src/sass/layout/_cube-face.scss */
 .face .left {
   transform: rotateY(-90deg) translateX(-25px) translateZ(25px);
 }
-/* line 161, ../../src/sass/_view-components.scss */
+/* line 51, ../../src/sass/layout/_cube-face.scss */
 .face .right {
   transform: rotateY(-90deg) translateX(-25px) translateZ(-25px);
 }
-/* line 164, ../../src/sass/_view-components.scss */
+/* line 54, ../../src/sass/layout/_cube-face.scss */
 .face .back {
   transform: translateZ(-50px);
 }
-/* line 167, ../../src/sass/_view-components.scss */
+/* line 57, ../../src/sass/layout/_cube-face.scss */
 .face .top {
   transform: rotateX(90deg) translateY(-50%) translateZ(25px);
 }
-/* line 170, ../../src/sass/_view-components.scss */
+/* line 60, ../../src/sass/layout/_cube-face.scss */
 .face .bottom {
   transform: rotateX(90deg) translateY(-50%) translateZ(-25px);
 }
 
-/* line 201, ../../src/sass/_view-components.scss */
-.visual-list {
-  @inlcude outer-container(1920px);
+/* line 2, ../../src/sass/layout/_navigation.scss */
+.arrow-circle {
+  width: 7vw;
+  height: 7vw;
+  padding: 1vw;
+  position: absolute;
+  border: 1px solid #999;
+  border-radius: 5vw;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+/* line 15, ../../src/sass/layout/_navigation.scss */
+.arrow-circle i {
+  width: 7vw;
+  height: 5vw;
+  font-size: 3vw;
+  display: table-cell;
+  vertical-align: middle;
+  text-shadow: -0.5px -0.5px 0 #333, 0.5px -0.5px 0 #333, -0.5px 0.5px 0 #333, 0.5px 0.5px 0 #333;
+  color: #fbfbfb;
+}
+/* line 25, ../../src/sass/layout/_navigation.scss */
+.arrow-circle:hover {
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
+}
+/* line 29, ../../src/sass/layout/_navigation.scss */
+.arrow-circle:hover i {
+  color: #fff;
+  text-shadow: -0.5px -0.5px 0 #555, 0.5px -0.5px 0 #555, -0.5px 0.5px 0 #555, 0.5px 0.5px 0 #555;
+  background: transparent;
+  box-shadow: none;
 }
 
-/* line 205, ../../src/sass/_view-components.scss */
-.visual-list li {
+/* line 38, ../../src/sass/layout/_navigation.scss */
+.arrow-circle--prev {
+  text-align: right;
+  left: -3vw;
+  top: 50%;
+}
+
+/* line 43, ../../src/sass/layout/_navigation.scss */
+.arrow-circle--next {
+  text-align: left;
+  right: -3vw;
+  top: 50%;
+}
+
+/* line 1, ../../src/sass/layout/_grid.scss */
+.flex {
+  @inlcude outer-container(1920px);
+  padding: 0 3%;
+  min-height: 80vh;
+}
+
+/* line 7, ../../src/sass/layout/_grid.scss */
+.flex__square {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 31.76157%;
+  height: 31.76157%;
+  padding: 2%;
+  text-align: center;
 }
-/* line 89, ../../src/sass/libraries/neat/grid/_span-columns.scss */
-.visual-list li:last-child {
+/* line 89, ../../src/sass/vendors/neat/grid/_span-columns.scss */
+.flex__square:last-child {
+  margin-right: 0;
+}
+/* line 14, ../../src/sass/layout/_grid.scss */
+.flex__square a {
+  margin: -50% -50%;
+  padding: 50% 50%;
+  display: inline-block;
+}
+/* line 18, ../../src/sass/layout/_grid.scss */
+.flex__square i {
+  transition: box-shadow 0.2s ease, color 0.2s ease;
+}
+/* line 22, ../../src/sass/layout/_grid.scss */
+.flex__square a:hover i {
+  color: #666;
+  box-shadow: 0 0 100px 50px rgba(255, 255, 255, 0.8);
+}
+
+/* line 27, ../../src/sass/layout/_grid.scss */
+.flex__square:nth-child(3n) {
   margin-right: 0;
 }
 
-/* ----- Page/View Specific ------*/
-/* line 221, ../../src/sass/_view-components.scss */
-.page-container {
-  width: 100%;
-  height: 100%;
-  perspective: 100vw;
+/* line 31, ../../src/sass/layout/_grid.scss */
+.flex__icon {
+  width: 20vw;
+  height: auto;
 }
 
-/* line 233, ../../src/sass/_view-components.scss */
+/* line 1, ../../src/sass/layout/_bottom-bar.scss */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+/* line 10, ../../src/sass/layout/_bottom-bar.scss */
+.bottom-bar--construction {
+  background-image: url("../images/banners/caution.svg");
+}
+
+/* line 14, ../../src/sass/layout/_bottom-bar.scss */
 .tone-menu {
   position: absolute;
   bottom: 0;
@@ -422,8 +371,8 @@ section section {
   drop-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* line 243, ../../src/sass/_view-components.scss */
-.tone-menu button {
+/* line 24, ../../src/sass/layout/_bottom-bar.scss */
+.tone-menu__button {
   display: inline-block;
   width: 46%;
   margin: 1% 2%;
@@ -434,67 +383,19 @@ section section {
   font-size: 16px;
 }
 
-/* line 255, ../../src/sass/_view-components.scss */
-.tone-menu button:last-child {
+/* line 36, ../../src/sass/layout/_bottom-bar.scss */
+.tone-menu__button:last-child {
   right: 0;
 }
 
-/* line 1, ../../src/sass/_views.scss */
-.Home {
-  background: #fbfbfb;
-}
-
-/* line 8, ../../src/sass/_views.scss */
-.View_1 {
-  background: #fbfbfb;
-}
-
-/* line 15, ../../src/sass/_views.scss */
-.View_2 {
-  background: #fbfbfb;
-}
-
-/* line 22, ../../src/sass/_views.scss */
-.About {
-  background: #fbfbfb;
-}
-
-/* line 29, ../../src/sass/_views.scss */
-.Menu {
-  background: #fbfbfb;
-}
-
-/* line 36, ../../src/sass/_views.scss */
-.Contact {
-  background: #fbfbfb;
-}
-
-/*
-.Feed {
-  @extend %view-face;
-  @extend %face-bottom;
-
-  background: $view-bg;
-}
-*/
-/* line 54, ../../src/sass/_views.scss */
-header .MenuIcon {
-  float: left;
-}
-
-/* line 58, ../../src/sass/_views.scss */
-header .contactIcon {
-  float: right;
-}
-
-/* line 65, ../../src/sass/_views.scss */
-.menu-list {
+/* line 1, ../../src/sass/pages/_menu.scss */
+.menu {
   perspective: 550px;
   margin-bottom: 30px;
 }
 
-/* line 69, ../../src/sass/_views.scss */
-.menu-option {
+/* line 5, ../../src/sass/pages/_menu.scss */
+.menu__option {
   width: 100%;
   height: 50px;
   margin: auto;
@@ -508,34 +409,111 @@ header .contactIcon {
   z-index: 1;
   cursor: pointer;
 }
-/* line 83, ../../src/sass/_views.scss */
-.menu-option:hover {
+/* line 19, ../../src/sass/pages/_menu.scss */
+.menu__option:hover {
   background: #fff;
 }
 
-/* line 88, ../../src/sass/_views.scss */
-.menu-deco-text {
+/* line 24, ../../src/sass/pages/_menu.scss */
+.menu__deco-text {
   color: #ddd;
   text-align: center;
 }
 
-/* line 92, ../../src/sass/_views.scss */
-.menu-deco-text1 {
+/* line 28, ../../src/sass/pages/_menu.scss */
+.menu__deco-text1 {
   transform: rotate(15deg);
   font-size: 26px;
   margin-right: 10%;
 }
 
-/* line 97, ../../src/sass/_views.scss */
-.menu-deco-text2 {
+/* line 33, ../../src/sass/pages/_menu.scss */
+.menu__deco-text2 {
   transform: rotate(-7deg);
   font-size: 14px;
   margin-right: 40%;
 }
 
-/* line 103, ../../src/sass/_views.scss */
-.menu-deco-text3 {
+/* line 39, ../../src/sass/pages/_menu.scss */
+.menu__deco-text3 {
   transform: rotate(35deg);
   font-size: 22px;
   margin-left: 10%;
 }
+
+/* line 1, ../../src/sass/themes/_casual.scss */
+.casual {
+  font-family: "Comic Sans MS", "Comic Sans";
+}
+
+/* line 1, ../../src/sass/themes/_formal.scss */
+.formal {
+  font-family: cursive;
+}
+
+/* vvv Depends on %view-cube so won't work without dependancy */
+/* ------ Components for multiple views -------*/
+/*3D*/
+/* line 14, ../../src/sass/_shame.scss */
+.moving-top .arrow-circle {
+  box-shadow: 1px -30px 40px rgba(0, 0, 0, 0.3) inset;
+  text-shadow: 1px -30px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* line 18, ../../src/sass/_shame.scss */
+.moving-left .arrow-circle {
+  box-shadow: -30px 1px 40px rgba(0, 0, 0, 0.3) inset;
+  text-shadow: -30px 1px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* line 22, ../../src/sass/_shame.scss */
+.moving-bottom .arrow-circle {
+  box-shadow: 1px 30px 40px rgba(0, 0, 0, 0.3) inset;
+  text-shadow: 1px 30px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* line 26, ../../src/sass/_shame.scss */
+.moving-right .arrow-circle {
+  box-shadow: 30px 1px 40px rgba(0, 0, 0, 0.3) inset;
+  text-shadow: 30px 1px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Static cube views that should be dynamic/independant of page --*/
+/* line 62, ../../src/sass/_shame.scss */
+.Home {
+  background: #fbfbfb;
+}
+
+/* line 69, ../../src/sass/_shame.scss */
+.View_1 {
+  background: #fbfbfb;
+}
+
+/* line 76, ../../src/sass/_shame.scss */
+.View_2 {
+  background: #fbfbfb;
+}
+
+/* line 83, ../../src/sass/_shame.scss */
+.About {
+  background: #fbfbfb;
+}
+
+/* line 90, ../../src/sass/_shame.scss */
+.Menu {
+  background: #fbfbfb;
+}
+
+/* line 97, ../../src/sass/_shame.scss */
+.Contact {
+  background: #fbfbfb;
+}
+
+/*
+.Feed {
+  @extend %view-face;
+  @extend %face-bottom;
+
+  background: $view-bg;
+}
+*/
