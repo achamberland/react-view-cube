@@ -397,7 +397,7 @@ View.Contact = React.createClass({
 
 
 
-var FeedData = require('./common/FeedData.js'); 
+//var FeedData = require('./common/FeedData.js'); 
 
 
 
