@@ -1,11 +1,28 @@
-@import "libraries/bourbon/bourbon.scss";
-@import "libraries/neat/neat.scss";
-@import "libraries/font-awesome/_font-awesome.min.css";
+@import "utils/_mixins.scss";
+@import "utils/_variables.scss";
+@import "utils/_functions.scss";
+@import "utils/_placeholders.scss";
 
-@import "_reset.scss";
-@import "_mixins.scss";
-@import "_variables.scss";
+@import "vendors/bourbon/bourbon.scss";
+@import "vendors/neat/neat.scss";
+@import "vendors/font-awesome/_font-awesome.min.css";
 
-@import "_general.scss";
-@import "_view-components.scss";
-@import "_views.scss";
+@import "base/_reset.scss";
+@import "base/_general.scss";
+
+@import "layout/_header.scss";
+@import "layout/_page.scss"; 
+@import "layout/_cube-face.scss";
+@import "layout/_navigation.scss";
+@import "layout/_grid.scss";
+@import "layout/_bottom-bar.scss";
+
+@import "pages/_menu.scss";
+
+@import "themes/_casual.scss";
+@import "themes/_formal.scss";
+
+
+@import "_shame.scss";
+
+@import "_config.scss";

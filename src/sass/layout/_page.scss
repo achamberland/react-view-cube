@@ -1,0 +1,29 @@
+#target {
+  width:100%;
+  height:100%;
+  background: $view-bg;
+}
+
+.page {
+  width: 100%;
+  height:100%;
+  
+  @extend %view-cube;
+}
+
+.page-container {    
+  width: 100%;
+  height: 100%;
+  perspective: 100vw;
+}
+
+section {
+  border:1px solid #bbb;
+}
+
+section section {
+  width:100%;
+  padding:1% 5% 5%;
+  border: none;
+  overflow:hidden;
+}

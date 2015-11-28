@@ -1,0 +1,111 @@
+
+/* vvv Depends on %view-cube so won't work without dependancy */
+
+
+
+
+/* ------ Components for multiple views -------*/
+
+
+
+/*3D*/
+
+
+%shadow-to-top {
+  box-shadow:  1px -30px 40px rgba(0,0,0,0.3) inset;
+  text-shadow: 1px -30px 40px rgba(0,0,0,0.3);
+}
+%shadow-to-right {
+  box-shadow:  -30px 1px 40px rgba(0,0,0,0.3) inset;
+  text-shadow: -30px 1px 40px rgba(0,0,0,0.3);
+}
+%shadow-to-bottom {
+  box-shadow:  1px 30px 40px rgba(0,0,0,0.3) inset;
+  text-shadow: 1px 30px 40px rgba(0,0,0,0.3);
+}
+%shadow-to-left {
+  box-shadow:  30px 1px 40px rgba(0,0,0,0.3) inset;
+  text-shadow: 30px 1px 40px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+.moving-top {
+  .arrow-circle {
+    @extend %shadow-to-top;
+  }
+}
+.moving-right {
+  .arrow-circle {
+    @extend %shadow-to-left;
+  }
+}
+.moving-bottom {
+  .arrow-circle {
+    @extend %shadow-to-bottom;
+  }
+}
+.moving-left {
+  .arrow-circle {
+    @extend %shadow-to-right;
+  }
+}
+
+
+
+
+/* ---- Static cube views that should be dynamic/independant of page --*/
+
+
+.Home {
+  @extend %view-face;
+  @extend %face-front;
+
+  background:$view-bg;
+}
+
+.View_1 {
+  @extend %view-face;
+  @extend %face-right;
+
+  background:$view-bg;
+}
+
+.View_2 {
+  @extend %view-face;
+  @extend %face-back;
+
+  background:$view-bg;
+}
+
+.About {
+  @extend %view-face;
+  @extend %face-left;
+
+  background:$view-bg;
+}
+
+.Menu {
+  @extend %view-face;
+  @extend %face-top;
+
+  background:$view-bg;
+}
+
+.Contact {
+  @extend %view-face;
+  @extend %face-bottom;
+
+  background: $view-bg;
+}
+
+/*
+.Feed {
+  @extend %view-face;
+  @extend %face-bottom;
+
+  background: $view-bg;
+}
+*/
