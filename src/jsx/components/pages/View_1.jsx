@@ -6,7 +6,7 @@ var View_1 = React.createClass({
   
   render: function(){
     return (
-      <section>
+      <section className="face-content">
         <NeatList data={this.languageData} />
       </section>
     )

@@ -1,7 +1,7 @@
 var Contact = React.createClass({
   render: function(){
     return (
-      <section>
+      <section className="face-content--full-width">
         <ul className='contactList flex'>
           <li className="flex__square">
             <a href="@">

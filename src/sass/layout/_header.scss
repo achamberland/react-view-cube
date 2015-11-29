@@ -12,6 +12,7 @@ header {
   
   a {
     @include click-padding(2%, 2%);
+    width: 9%;
     
     cursor: pointer;
     position:relative;

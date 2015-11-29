@@ -1,7 +1,7 @@
 var Menu = React.createClass({
   render: function() {
     return (
-      <section>
+      <section className="face-content--full-width">
         <Menu.List clickAction={this.props.clickAction} /> 
         <h4 className='menu__deco-text1 menu__deco-text'>3D Menu!</h4>
         <h4 className='menu__deco-text2 menu__deco-text'>Whoa!</h4>

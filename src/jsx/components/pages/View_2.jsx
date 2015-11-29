@@ -9,7 +9,7 @@ var View_2 = React.createClass({
     return (
       //Extra- spin logo around on hover
 
-      <section>
+      <section className="face-content">
         <NeatList data={this.frameworkData} />
       </section>
     )

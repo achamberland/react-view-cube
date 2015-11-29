@@ -260,7 +260,7 @@ return (
 /* dummy menu */
 
 /* THis would go where formality enu goes
-        <div className='tone-menu'>
+        <div className='tone-menu bottom-bar'>
           <button onClick={this.chooseToneEvent.bind(this, 'formal')} title='formal' selected={this.state.tone= 'formal'}>
             Formal
           </button>
