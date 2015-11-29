@@ -216,13 +216,11 @@ class Page extends React.Component {
 
     var views = this.getViews().map(function(viewKey, i){
       var ViewElement = View[viewKey]; 
-      return (
-        <section className={viewKey} key={i}> 
-          <Header 
-            currentView={viewKey}
-            clickAction={this.changeViewEvent}
-          />
-
+      if (i > 3) {
+        var NavArrowSet = null 
+      } 
+      else {
+        var NavArrowSet = 
           <NavArrows
             views={this.state.views} 
             viewFlow={this.getViewsInFlow()} 
@@ -230,7 +228,17 @@ class Page extends React.Component {
             viewIndex={i} 
             clickAction={this.changeViewEvent}
           />
+      }
 
+      return (
+        <section className={viewKey} key={i}> 
+          <Header 
+            currentView={viewKey}
+            clickAction={this.changeViewEvent}
+          />
+
+          { NavArrowSet }
+          
           <ViewElement 
             data-viewid={viewKey} 
             views={this.state.views} 
