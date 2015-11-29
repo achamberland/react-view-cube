@@ -7,11 +7,12 @@
 //Config - Filepaths
 
 var JSX_SRC     = 'src/jsx/main.jsx';
-var JSX_SRC_DIR = 'src/jsx/**/*';
+var JSX_SRC_DIR = 'src/jsx/**/*.jsx';
 var JS_DEST     = 'build/js';
 
-var SASS_SRC = 'src/sass/app.scss';
-var CSS_DEST = 'build/css';
+var SASS_SRC     = 'src/sass/app.scss';
+var SASS_SRC_DIR = 'src/sass/**/*.scss';
+var CSS_DEST     = 'build/css';
 
 //Support adding custom Dependencies to pipe- one for streams one for normal pipes, css + js
 
@@ -67,6 +68,6 @@ gulp.task('bundleSASS', function(){
 gulp.task('default', ['bundleJS', 'bundleSASS'], function() {
 
   gulp.watch( JSX_SRC_DIR, ['bundleJS'] );
-  gulp.watch( SASS_SRC,    ['bundleSASS'] );
+  gulp.watch( SASS_SRC_DIR,['bundleSASS'] );
 
 });

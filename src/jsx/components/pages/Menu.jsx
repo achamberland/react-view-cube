@@ -1,13 +1,7 @@
-var Header = require('./Header.jsx');
-
 var Menu = React.createClass({
   render: function() {
     return (
-      <section className={this.props['data-viewid']} >
-        <Header 
-          currentView={this.props['data-viewid']} 
-          clickAction={this.props.clickAction}
-        />
+      <section>
         <Menu.List clickAction={this.props.clickAction} /> 
         <h4 className='menu__deco-text1 menu__deco-text'>3D Menu!</h4>
         <h4 className='menu__deco-text2 menu__deco-text'>Whoa!</h4>
