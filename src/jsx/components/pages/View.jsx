@@ -4,8 +4,6 @@ var View = React.createClass({
   },
 });
 
-View.Header = require('./Header.jsx');
-
 View.Home 	 = require('./Home.jsx');
 View.Contact = require('./Contact.jsx');
 View.Feed    = require('./Feed.jsx');

@@ -24,6 +24,9 @@
 .menu__deco-text {
   color:#ddd;
   text-align: center; 
+  
+  z-index: -1;
+  position: relative;
 }
 .menu__deco-text1 {
   transform: rotate(15deg);

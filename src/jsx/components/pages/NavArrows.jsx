@@ -1,5 +1,11 @@
 
 var NavArrows = React.createClass({
+  propTypes: {
+    currentView: React.PropTypes.string.isRequired,
+    viewFlow: React.PropTypes.array.isRequired,
+    clickAction: React.PropTypes.func.isRequired
+  }, 
+
   getParentIndex: function(){
     return this.props.viewFlow.indexOf(this.props.currentView);
   },
@@ -40,7 +46,7 @@ var NavArrows = React.createClass({
         cubeFace = this.getCubeFace();
 
     return (
-      <div className={this.getMovement()}>
+      <div className={'NavArrows ' + this.getMovement()}>
         <div data-viewid={prev} onClick={function(e){this.props.clickAction(e, prev, 'prev')}.bind(this) } className={'arrow-circle arrow-circle--prev ' + cubeFace}>
           <i className='fa fa-2x fa-arrow-left'></i>
         </div>

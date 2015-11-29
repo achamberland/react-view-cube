@@ -1,4 +1,7 @@
-var View = require('./pages/View.jsx');
+var View      = require('./pages/View.jsx');
+var Header    = require('./pages/Header.jsx');
+var NavArrows = require('./pages/NavArrows.jsx');
+
 
 class Page extends React.Component {
 
@@ -186,7 +189,8 @@ class Page extends React.Component {
     });
   }
   
-  render() { console.log('active: ', this.state.views.active);
+  render() {
+    console.log('active: ', this.state.views.active);
     var styles = this.getStyles(),
         transforms = this.get3DPosition()[ this.state.views.active ],
         willMakeFullRotation = this.willMakeFullRotation();
@@ -212,20 +216,40 @@ class Page extends React.Component {
 
     var views = this.getViews().map(function(viewKey, i){
       var ViewElement = View[viewKey]; 
+      if (i > 3) {
+        var NavArrowSet = null 
+      } 
+      else {
+        var NavArrowSet = 
+          <NavArrows
+            views={this.state.views} 
+            viewFlow={this.getViewsInFlow()} 
+            currentView={viewKey} 
+            viewIndex={i} 
+            clickAction={this.changeViewEvent}
+          />
+      }
+
       return (
-        <ViewElement 
-          data-viewid={viewKey} 
-          views={this.state.views} 
-          viewFlow={this.getViewsInFlow()} 
-          clickAction={this.changeViewEvent} 
-          tone={this.state.tone} 
-          key={i} 
-          viewIndex={i}
-        />
+        <section className={viewKey} key={i}> 
+          <Header 
+            currentView={viewKey}
+            clickAction={this.changeViewEvent}
+          />
+
+          { NavArrowSet }
+          
+          <ViewElement 
+            data-viewid={viewKey} 
+            views={this.state.views} 
+            viewFlow={this.getViewsInFlow()} 
+            clickAction={this.changeViewEvent} 
+          />
+        </section>
       );
   }.bind(this));
 
-return (
+return ( 
   <div className='page-container'>
     <div style={styles} className={this.state.tone}>
       {views}
@@ -236,7 +260,7 @@ return (
 /* dummy menu */
 
 /* THis would go where formality enu goes
-        <div className='tone-menu'>
+        <div className='tone-menu bottom-bar'>
           <button onClick={this.chooseToneEvent.bind(this, 'formal')} title='formal' selected={this.state.tone= 'formal'}>
             Formal
           </button>
