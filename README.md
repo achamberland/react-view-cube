@@ -13,5 +13,10 @@ To build, just navigate to the react-cube-view folder in the command line and ty
 
 Future Plans
 -------
-To let any component be added to the cube with a method call like:  
+
+- Let any component be added to the cube with a method call like:  
 `Cube.addFace( {{Component}}, {{faceIndex}}, {{verticalPos}} );`
+
+- Move navigation to header on desktop/tablet
+
+- Improve mobile support
