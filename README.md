@@ -1,6 +1,12 @@
 # react-view-cube
 
-A template for websites with less than 6 views. Each view is a side of a cube, navigation rotates the cube.
+A template made with React for websites with less than 6 views. Each view is a side of a cube, navigation rotates the cube.
+
+[Demo](http://achamberland.com/)
+-------
+A demo template can found here: <http://achamberland.com/>
+
+To see the effect, use the arrow keys or click the left/right arrows on each face of the cube. The menu and contact links in the header rotate the cube up or down.
 
 
 Build
